@@ -1,0 +1,435 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local hey = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local main = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local Rage = Instance.new("ImageButton")
+local Home = Instance.new("ImageButton")
+local RageFrame = Instance.new("Frame")
+local Explosive = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local NoRecoilAndSpread = Instance.new("Frame")
+local TextButton_2 = Instance.new("TextButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local NexusHub = Instance.new("Frame")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextButton_3 = Instance.new("TextButton")
+local InfYield = Instance.new("Frame")
+local TextLabel_5 = Instance.new("TextLabel")
+local TextButton_4 = Instance.new("TextButton")
+local HomeFrame = Instance.new("Frame")
+local TextLabel_6 = Instance.new("TextLabel")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextLabel_8 = Instance.new("TextLabel")
+
+--Properties:
+
+hey.Name = "hey"
+hey.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+hey.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+hey.ResetOnSpawn = false
+
+Frame.Parent = hey
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(40, 40, 43)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.138996407, 0, 0.0764451325, 0)
+Frame.Size = UDim2.new(0, 450, 0, 26)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Position = UDim2.new(0, 0, -0.0376862288, 0)
+TextLabel.Size = UDim2.new(0, 450, 0, 28)
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.Text = "OOFSense"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 18.000
+TextLabel.TextWrapped = true
+
+main.Name = "main"
+main.Parent = Frame
+main.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+main.Position = UDim2.new(0, 0, 0, 26)
+main.Size = UDim2.new(0, 450, 0, 467)
+
+Frame_2.Parent = main
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BorderColor3 = Color3.fromRGB(40, 40, 43)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0, 80, 0, 10)
+Frame_2.Size = UDim2.new(0, 2, 0, 457)
+
+Rage.Name = "Rage"
+Rage.Parent = main
+Rage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Rage.BackgroundTransparency = 1.000
+Rage.BorderSizePixel = 0
+Rage.Position = UDim2.new(0, 8, 0, 108)
+Rage.Size = UDim2.new(0, 62, 0, 62)
+Rage.Image = "http://www.roblox.com/asset/?id=8850953349"
+
+Home.Name = "Home"
+Home.Parent = main
+Home.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Home.BackgroundTransparency = 1.000
+Home.BorderSizePixel = 0
+Home.Position = UDim2.new(0, 4, 0, 22)
+Home.Size = UDim2.new(0, 71, 0, 62)
+Home.Image = "http://www.roblox.com/asset/?id=4034483344"
+
+RageFrame.Name = "RageFrame"
+RageFrame.Parent = main
+RageFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+RageFrame.BorderColor3 = Color3.fromRGB(40, 40, 43)
+RageFrame.BorderSizePixel = 0
+RageFrame.Position = UDim2.new(0, 82, 0, 0)
+RageFrame.Size = UDim2.new(0, 368, 0, 467)
+RageFrame.Visible = false
+
+Explosive.Name = "Explosive"
+Explosive.Parent = RageFrame
+Explosive.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Explosive.Position = UDim2.new(0, 44, 0, 9)
+Explosive.Size = UDim2.new(0, 279, 0, 82)
+
+TextLabel_2.Parent = Explosive
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+TextLabel_2.Position = UDim2.new(0, 37, 0, 5)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 37)
+TextLabel_2.Font = Enum.Font.GothamBold
+TextLabel_2.Text = "Explosive Ammo"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+TextButton.Parent = Explosive
+TextButton.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+TextButton.Position = UDim2.new(0, 37, 0, 40)
+TextButton.Size = UDim2.new(0, 200, 0, 34)
+TextButton.Font = Enum.Font.GothamBold
+TextButton.Text = "Click me!"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Click:Connect(function()
+	for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetDescendants()) do
+		if v:IsA("ModuleScript") and v.Name == "Settings" then
+			local a = require(v)
+
+
+			a.FireRate = 800
+			a.ExplosiveHit = true
+			a.CanDamageBlizzard = true
+			a.FallOfDamage = -10000
+			a.BWEmitter = 100
+			a.ExPressure = 1000
+			a.LauncherDestroyJointRadiusPercent = 1000
+			a.BlizzardDamage = 100
+			a.RainbowMode = true
+			a.WalkMultiplier = 100
+			a.BulletPenetration = 1000
+			a.GunSize = 10
+
+
+			for i,v in pairs(a) do print(i,v) end end end
+end)
+
+NoRecoilAndSpread.Name = "No Recoil And Spread"
+NoRecoilAndSpread.Parent = RageFrame
+NoRecoilAndSpread.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NoRecoilAndSpread.Position = UDim2.new(0, 44, 0, 108)
+NoRecoilAndSpread.Size = UDim2.new(0, 279, 0, 82)
+
+TextButton_2.Parent = NoRecoilAndSpread
+TextButton_2.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+TextButton_2.Position = UDim2.new(0, 37, 0, 40)
+TextButton_2.Size = UDim2.new(0, 200, 0, 34)
+TextButton_2.Font = Enum.Font.GothamBold
+TextButton_2.Text = "Click me!"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+TextLabel_3.Parent = NoRecoilAndSpread
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+TextLabel_3.Position = UDim2.new(0, 37, 0, 5)
+TextLabel_3.Size = UDim2.new(0, 200, 0, 37)
+TextLabel_3.Font = Enum.Font.GothamBold
+TextLabel_3.Text = "No recoil and spread"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+NexusHub.Name = "NexusHub"
+NexusHub.Parent = RageFrame
+NexusHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NexusHub.Position = UDim2.new(0, 44, 0, 208)
+NexusHub.Size = UDim2.new(0, 279, 0, 82)
+
+TextLabel_4.Parent = NexusHub
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+TextLabel_4.Position = UDim2.new(0, 37, 0, 5)
+TextLabel_4.Size = UDim2.new(0, 200, 0, 37)
+TextLabel_4.Font = Enum.Font.GothamBold
+TextLabel_4.Text = "NexusHub (Not Ours)"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+TextButton_3.Parent = NexusHub
+TextButton_3.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+TextButton_3.Position = UDim2.new(0, 37, 0, 40)
+TextButton_3.Size = UDim2.new(0, 200, 0, 34)
+TextButton_3.Font = Enum.Font.GothamBold
+TextButton_3.Text = "Click me!"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14.000
+TextButton_3.TextWrapped = true
+TextButton_3.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GwnStefano/NexusHub/main/Main", true))()
+end)
+
+InfYield.Name = "InfYield"
+InfYield.Parent = RageFrame
+InfYield.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InfYield.Position = UDim2.new(0, 44, 0, 309)
+InfYield.Size = UDim2.new(0, 279, 0, 82)
+
+TextLabel_5.Parent = InfYield
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+TextLabel_5.Position = UDim2.new(0, 37, 0, 5)
+TextLabel_5.Size = UDim2.new(0, 200, 0, 37)
+TextLabel_5.Font = Enum.Font.GothamBold
+TextLabel_5.Text = "Infinity Yield (Not Ours)"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+
+TextButton_4.Parent = InfYield
+TextButton_4.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+TextButton_4.Position = UDim2.new(0, 37, 0, 40)
+TextButton_4.Size = UDim2.new(0, 200, 0, 34)
+TextButton_4.Font = Enum.Font.GothamBold
+TextButton_4.Text = "Click me!"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.TextScaled = true
+TextButton_4.TextSize = 14.000
+TextButton_4.TextWrapped = true
+TextButton_4.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+HomeFrame.Name = "HomeFrame"
+HomeFrame.Parent = main
+HomeFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+HomeFrame.BorderColor3 = Color3.fromRGB(40, 40, 43)
+HomeFrame.BorderSizePixel = 0
+HomeFrame.Position = UDim2.new(0, 82, 0, 0)
+HomeFrame.Size = UDim2.new(0, 368, 0, 467)
+
+TextLabel_6.Parent = HomeFrame
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Position = UDim2.new(0, 43, 0, 28)
+TextLabel_6.Size = UDim2.new(0, 280, 0, 50)
+TextLabel_6.Font = Enum.Font.GothamBold
+TextLabel_6.Text = "Welcome to OOFSense"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 45.000
+TextLabel_6.TextWrapped = true
+
+TextLabel_7.Parent = HomeFrame
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Position = UDim2.new(0, 44, 0, 92)
+TextLabel_7.Size = UDim2.new(0, 279, 0, 50)
+TextLabel_7.Font = Enum.Font.GothamBold
+TextLabel_7.Text = "You're logged as, User"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 14.000
+TextLabel_7.TextWrapped = true
+
+TextLabel_8.Parent = HomeFrame
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.Position = UDim2.new(0, 36, 0, 208)
+TextLabel_8.Size = UDim2.new(0, 293, 0, 50)
+TextLabel_8.Font = Enum.Font.GothamBold
+TextLabel_8.Text = "More features in future !!"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 45.000
+TextLabel_8.TextWrapped = true
+
+-- Scripts:
+
+local function QPGXHF_fake_script() -- TextLabel.Rainbow Script - Put in any part 
+	local script = Instance.new('Script', TextLabel)
+
+	while true do
+		script.Parent.BackgroundColor3 = Color3.new(255/255,0/255,0/255)
+		for i = 0,255,10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(255/255,i/255,0/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(i/255,255/255,0/255)
+		end
+		for i = 0,255,10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(0/255,255/255,i/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(0/255,i/255,255/255)
+		end
+		for i = 0,255,10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(i/255,0/255,255/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(255/255,0/255,i/255)
+		end
+	end
+end
+coroutine.wrap(QPGXHF_fake_script)()
+local function JBYRLG_fake_script() -- Frame.SmoothDrag 
+	local script = Instance.new('LocalScript', Frame)
+
+	local Drag = script.Parent.Parent.Frame
+	gsCoreGui = game:GetService("CoreGui")
+	gsTween = game:GetService("TweenService")
+	local UserInputService = game:GetService("UserInputService")
+		local dragging
+		local dragInput
+		local dragStart
+		local startPos
+		local function update(input)
+			local delta = input.Position - dragStart
+			local dragTime = 0.04
+			local SmoothDrag = {}
+			SmoothDrag.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+			local dragSmoothFunction = gsTween:Create(Drag, TweenInfo.new(dragTime, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), SmoothDrag)
+			dragSmoothFunction:Play()
+		end
+		Drag.InputBegan:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+				dragging = true
+				dragStart = input.Position
+				startPos = Drag.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragging = false
+					end
+				end)
+			end
+		end)
+		Drag.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		UserInputService.InputChanged:Connect(function(input)
+			if input == dragInput and dragging and Drag.Size then
+				update(input)
+			end
+		end)
+	
+end
+coroutine.wrap(JBYRLG_fake_script)()
+local function KHBMTPP_fake_script() -- Frame_2.Rainbow Script - Put in any part 
+	local script = Instance.new('Script', Frame_2)
+
+	while true do
+		script.Parent.BackgroundColor3 = Color3.new(255/255,0/255,0/255)
+		for i = 0,255,10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(255/255,i/255,0/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(i/255,255/255,0/255)
+		end
+		for i = 0,255,10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(0/255,255/255,i/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(0/255,i/255,255/255)
+		end
+		for i = 0,255,10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(i/255,0/255,255/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(255/255,0/255,i/255)
+		end
+	end
+end
+coroutine.wrap(KHBMTPP_fake_script)()
+local function CMHLQ_fake_script() -- Rage.LocalScript 
+	local script = Instance.new('LocalScript', Rage)
+
+	local frame = script.Parent.Parent.RageFrame
+	local frame2 = script.Parent.Parent.HomeFrame
+	local open = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame.Visible == false then
+			frame.Visible = true
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame2.Visible == true then
+			frame2.Visible = false
+		end
+	end)
+end
+coroutine.wrap(CMHLQ_fake_script)()
+local function CTPK_fake_script() -- Home.LocalScript 
+	local script = Instance.new('LocalScript', Home)
+
+	local frame = script.Parent.Parent.RageFrame
+	local frame2 = script.Parent.Parent.HomeFrame
+	local open = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame.Visible == true then
+			frame.Visible = false
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame2.Visible == false then
+			frame2.Visible = true
+		end
+	end)
+end
+coroutine.wrap(CTPK_fake_script)()
+local function KMASVNC_fake_script() -- TextLabel_7.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_7)
+
+	wait()
+	script.Parent.Text = "You're logged as, ".. game.Players.LocalPlayer.Name
+end
+coroutine.wrap(KMASVNC_fake_script)()
