@@ -1,0 +1,75 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local OOFLogin = Instance.new("ScreenGui")
+local login = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local password = Instance.new("TextBox")
+local confirm = Instance.new("TextButton")
+
+--Properties:
+
+OOFLogin.Name = "OOFLogin"
+OOFLogin.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+OOFLogin.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+login.Name = "login"
+login.Parent = OOFLogin
+login.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+login.BorderColor3 = Color3.fromRGB(40, 40, 43)
+login.Position = UDim2.new(0, 176, 0, 98)
+login.Size = UDim2.new(0, 575, 0, 262)
+
+TextLabel.Parent = login
+TextLabel.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+TextLabel.BorderColor3 = Color3.fromRGB(40, 40, 43)
+TextLabel.Position = UDim2.new(0.325217396, 0, 0.114503816, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.Text = "Password"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 39.000
+
+password.Name = "password"
+password.Parent = login
+password.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+password.Position = UDim2.new(0.0886956528, 0, 0.496183217, 0)
+password.Size = UDim2.new(0, 474, 0, 50)
+password.Font = Enum.Font.GothamBold
+password.Text = ""
+password.TextColor3 = Color3.fromRGB(0, 0, 0)
+password.TextScaled = true
+password.TextSize = 14.000
+password.TextWrapped = true
+
+confirm.Name = "confirm"
+confirm.Parent = login
+confirm.BackgroundColor3 = Color3.fromRGB(85, 255, 0)
+confirm.Position = UDim2.new(0.328695655, 0, 0.778625965, 0)
+confirm.Size = UDim2.new(0, 200, 0, 50)
+confirm.Font = Enum.Font.GothamBold
+confirm.Text = "Confirm"
+confirm.TextColor3 = Color3.fromRGB(0, 0, 0)
+confirm.TextScaled = true
+confirm.TextSize = 14.000
+confirm.TextWrapped = true
+
+-- Scripts:
+
+local function ETZF_fake_script() -- confirm.LocalScript 
+	local script = Instance.new('LocalScript', confirm)
+
+	local password = script.Parent.Parent.Parent.login.password
+	local login = script.Parent.Parent.Parent.login
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if password.Text == "bigshock is good816994" then
+			login.Visible = false
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/ForceSultan/OOFSense/main/OOFSense%20V.1.0", true))()
+		end
+	end)
+end
+coroutine.wrap(ETZF_fake_script)()
