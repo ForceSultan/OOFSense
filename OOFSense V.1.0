@@ -158,6 +158,29 @@ TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_2.TextScaled = true
 TextButton_2.TextSize = 14.000
 TextButton_2.TextWrapped = true
+TextButton_2.MouseButton1Click:Connect(Function()
+	for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetDescendants()) do
+		if v:IsA("ModuleScript") and v.Name == "Settings" then
+			local a = require(v)
+			
+			    a.SwayBase = 0
+                a.VRecoil = { 0, 0 }
+                a.HRecoil = { 0, 0 }
+                a.AimRecoilReduction = 50
+                a.MinRecoilPower = 0
+                a.MaxRecoilPower = 0
+                a.RecoilPowerStepAmount = 0
+                a.RecoilPunch = 0
+                a.AimInaccuracyStepAmount = 0
+		a.MinSpread = 0
+                a.axSpread = 0
+
+
+
+
+
+			for i,v in pairs(a) do print(i,v) end end end
+end)
 
 TextLabel_3.Parent = NoRecoilAndSpread
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
