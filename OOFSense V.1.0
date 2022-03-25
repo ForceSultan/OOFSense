@@ -158,7 +158,7 @@ TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_2.TextScaled = true
 TextButton_2.TextSize = 14.000
 TextButton_2.TextWrapped = true
-TextButton_2.MouseButton1Click:Connect(Function()
+TextButton_2.MouseButton1Click:Connect(function()
 	for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetDescendants()) do
 		if v:IsA("ModuleScript") and v.Name == "Settings" then
 			local a = require(v)
