@@ -27,6 +27,13 @@ local HomeFrame = Instance.new("Frame")
 local TextLabel_6 = Instance.new("TextLabel")
 local TextLabel_7 = Instance.new("TextLabel")
 local TextLabel_8 = Instance.new("TextLabel")
+local TextLabel_9 = Instance.new("TextLabel")
+local Rage2 = Instance.new("ImageButton")
+local TextLabel_10 = Instance.new("TextLabel")
+local RageFrame2 = Instance.new("Frame")
+local NoRecoilandSpread = Instance.new("Frame")
+local TextLabel_11 = Instance.new("TextLabel")
+local TextButton_5 = Instance.new("TextButton")
 
 --Properties:
 
@@ -94,7 +101,7 @@ RageFrame.Visible = false
 
 Explosive.Name = "Explosive"
 Explosive.Parent = RageFrame
-Explosive.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Explosive.BackgroundColor3 = Color3.fromRGB(0, 67, 0)
 Explosive.Position = UDim2.new(0, 44, 0, 9)
 Explosive.Size = UDim2.new(0, 279, 0, 82)
 
@@ -103,7 +110,7 @@ TextLabel_2.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
 TextLabel_2.Position = UDim2.new(0, 37, 0, 5)
 TextLabel_2.Size = UDim2.new(0, 200, 0, 37)
 TextLabel_2.Font = Enum.Font.GothamBold
-TextLabel_2.Text = "Explosive Ammo"
+TextLabel_2.Text = "Explosive Ammo ACS  Older Versions"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 14.000
@@ -119,32 +126,10 @@ TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.TextScaled = true
 TextButton.TextSize = 14.000
 TextButton.TextWrapped = true
-TextButton.MouseButton1Click:Connect(function()
-	for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetDescendants()) do
-		if v:IsA("ModuleScript") and v.Name == "Settings" then
-			local a = require(v)
-
-
-			a.FireRate = 800
-			a.ExplosiveHit = true
-			a.CanDamageBlizzard = true
-			a.FallOfDamage = -10000
-			a.BWEmitter = 100
-			a.ExPressure = 1000
-			a.LauncherDestroyJointRadiusPercent = 1000
-			a.BlizzardDamage = 100
-			a.RainbowMode = true
-			a.WalkMultiplier = 100
-			a.BulletPenetration = 1000
-			a.GunSize = 10
-
-
-			for i,v in pairs(a) do print(i,v) end end end
-end)
 
 NoRecoilAndSpread.Name = "No Recoil And Spread"
 NoRecoilAndSpread.Parent = RageFrame
-NoRecoilAndSpread.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NoRecoilAndSpread.BackgroundColor3 = Color3.fromRGB(0, 67, 0)
 NoRecoilAndSpread.Position = UDim2.new(0, 44, 0, 108)
 NoRecoilAndSpread.Size = UDim2.new(0, 279, 0, 82)
 
@@ -158,36 +143,13 @@ TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_2.TextScaled = true
 TextButton_2.TextSize = 14.000
 TextButton_2.TextWrapped = true
-TextButton_2.MouseButton1Click:Connect(function()
-	for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetDescendants()) do
-		if v:IsA("ModuleScript") and v.Name == "Settings" then
-			local a = require(v)
-			
-			    a.SwayBase = 0
-                a.VRecoil = { 0, 0 }
-                a.HRecoil = { 0, 0 }
-                a.AimRecoilReduction = 50
-                a.MinRecoilPower = 0
-                a.MaxRecoilPower = 0
-                a.RecoilPowerStepAmount = 0
-                a.RecoilPunch = 0
-                a.AimInaccuracyStepAmount = 0
-		a.MinSpread = 0
-                a.axSpread = 0
-
-
-
-
-
-			for i,v in pairs(a) do print(i,v) end end end
-end)
 
 TextLabel_3.Parent = NoRecoilAndSpread
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
 TextLabel_3.Position = UDim2.new(0, 37, 0, 5)
 TextLabel_3.Size = UDim2.new(0, 200, 0, 37)
 TextLabel_3.Font = Enum.Font.GothamBold
-TextLabel_3.Text = "No recoil and spread"
+TextLabel_3.Text = "No Recoil and Spread ACS Older Versions"
 TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.TextScaled = true
 TextLabel_3.TextSize = 14.000
@@ -195,8 +157,8 @@ TextLabel_3.TextWrapped = true
 
 NexusHub.Name = "NexusHub"
 NexusHub.Parent = RageFrame
-NexusHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-NexusHub.Position = UDim2.new(0, 44, 0, 208)
+NexusHub.BackgroundColor3 = Color3.fromRGB(0, 67, 0)
+NexusHub.Position = UDim2.new(0, 44, 0, 202)
 NexusHub.Size = UDim2.new(0, 279, 0, 82)
 
 TextLabel_4.Parent = NexusHub
@@ -220,14 +182,11 @@ TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_3.TextScaled = true
 TextButton_3.TextSize = 14.000
 TextButton_3.TextWrapped = true
-TextButton_3.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/GwnStefano/NexusHub/main/Main", true))()
-end)
 
 InfYield.Name = "InfYield"
 InfYield.Parent = RageFrame
-InfYield.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-InfYield.Position = UDim2.new(0, 44, 0, 309)
+InfYield.BackgroundColor3 = Color3.fromRGB(0, 67, 0)
+InfYield.Position = UDim2.new(0, 44, 0, 301)
 InfYield.Size = UDim2.new(0, 279, 0, 82)
 
 TextLabel_5.Parent = InfYield
@@ -251,9 +210,6 @@ TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_4.TextScaled = true
 TextButton_4.TextSize = 14.000
 TextButton_4.TextWrapped = true
-TextButton_4.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
 
 HomeFrame.Name = "HomeFrame"
 HomeFrame.Parent = main
@@ -290,7 +246,7 @@ TextLabel_7.TextWrapped = true
 TextLabel_8.Parent = HomeFrame
 TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.BackgroundTransparency = 1.000
-TextLabel_8.Position = UDim2.new(0, 36, 0, 208)
+TextLabel_8.Position = UDim2.new(0, 37, 0, 402)
 TextLabel_8.Size = UDim2.new(0, 293, 0, 50)
 TextLabel_8.Font = Enum.Font.GothamBold
 TextLabel_8.Text = "More features in future !!"
@@ -299,9 +255,79 @@ TextLabel_8.TextScaled = true
 TextLabel_8.TextSize = 45.000
 TextLabel_8.TextWrapped = true
 
+TextLabel_9.Parent = HomeFrame
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.Position = UDim2.new(0, 37, 0, 150)
+TextLabel_9.Size = UDim2.new(0, 293, 0, 50)
+TextLabel_9.Font = Enum.Font.GothamBold
+TextLabel_9.Text = "Press \"L\" to hide and open"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 45.000
+TextLabel_9.TextWrapped = true
+
+Rage2.Name = "Rage2"
+Rage2.Parent = main
+Rage2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Rage2.BackgroundTransparency = 1.000
+Rage2.BorderSizePixel = 0
+Rage2.Position = UDim2.new(0, 8, 0, 202)
+Rage2.Size = UDim2.new(0, 62, 0, 62)
+Rage2.Image = "http://www.roblox.com/asset/?id=8850953349"
+
+TextLabel_10.Parent = Rage2
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.Position = UDim2.new(-0.129032254, 0, 0.354838729, 0)
+TextLabel_10.Size = UDim2.new(0, 45, 0, 28)
+TextLabel_10.Font = Enum.Font.GothamBold
+TextLabel_10.Text = "2"
+TextLabel_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_10.TextScaled = true
+TextLabel_10.TextSize = 14.000
+TextLabel_10.TextWrapped = true
+
+RageFrame2.Name = "RageFrame2"
+RageFrame2.Parent = main
+RageFrame2.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+RageFrame2.BorderColor3 = Color3.fromRGB(40, 40, 43)
+RageFrame2.BorderSizePixel = 0
+RageFrame2.Position = UDim2.new(0, 82, 0, 0)
+RageFrame2.Size = UDim2.new(0, 368, 0, 467)
+RageFrame2.Visible = false
+
+NoRecoilandSpread.Name = "No Recoil and Spread"
+NoRecoilandSpread.Parent = RageFrame2
+NoRecoilandSpread.BackgroundColor3 = Color3.fromRGB(0, 67, 0)
+NoRecoilandSpread.Position = UDim2.new(0, 44, 0, 9)
+NoRecoilandSpread.Size = UDim2.new(0, 279, 0, 82)
+
+TextLabel_11.Parent = NoRecoilandSpread
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+TextLabel_11.Position = UDim2.new(0, 37, 0, 5)
+TextLabel_11.Size = UDim2.new(0, 200, 0, 37)
+TextLabel_11.Font = Enum.Font.GothamBold
+TextLabel_11.Text = "No Recoil and Spread ACS Newer Versions"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextScaled = true
+TextLabel_11.TextSize = 14.000
+TextLabel_11.TextWrapped = true
+
+TextButton_5.Parent = NoRecoilandSpread
+TextButton_5.BackgroundColor3 = Color3.fromRGB(40, 40, 43)
+TextButton_5.Position = UDim2.new(0, 37, 0, 40)
+TextButton_5.Size = UDim2.new(0, 200, 0, 34)
+TextButton_5.Font = Enum.Font.GothamBold
+TextButton_5.Text = "Click me!"
+TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.TextScaled = true
+TextButton_5.TextSize = 14.000
+TextButton_5.TextWrapped = true
+
 -- Scripts:
 
-local function QPGXHF_fake_script() -- TextLabel.Rainbow Script - Put in any part 
+local function FAGVH_fake_script() -- TextLabel.Rainbow Script - Put in any part 
 	local script = Instance.new('Script', TextLabel)
 
 	while true do
@@ -332,8 +358,8 @@ local function QPGXHF_fake_script() -- TextLabel.Rainbow Script - Put in any par
 		end
 	end
 end
-coroutine.wrap(QPGXHF_fake_script)()
-local function JBYRLG_fake_script() -- Frame.SmoothDrag 
+coroutine.wrap(FAGVH_fake_script)()
+local function XZNI_fake_script() -- Frame.SmoothDrag 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Drag = script.Parent.Parent.Frame
@@ -376,8 +402,8 @@ local function JBYRLG_fake_script() -- Frame.SmoothDrag
 		end)
 	
 end
-coroutine.wrap(JBYRLG_fake_script)()
-local function KHBMTPP_fake_script() -- Frame_2.Rainbow Script - Put in any part 
+coroutine.wrap(XZNI_fake_script)()
+local function GSMKP_fake_script() -- Frame_2.Rainbow Script - Put in any part 
 	local script = Instance.new('Script', Frame_2)
 
 	while true do
@@ -408,12 +434,13 @@ local function KHBMTPP_fake_script() -- Frame_2.Rainbow Script - Put in any part
 		end
 	end
 end
-coroutine.wrap(KHBMTPP_fake_script)()
-local function CMHLQ_fake_script() -- Rage.LocalScript 
+coroutine.wrap(GSMKP_fake_script)()
+local function TETNE_fake_script() -- Rage.LocalScript 
 	local script = Instance.new('LocalScript', Rage)
 
 	local frame = script.Parent.Parent.RageFrame
 	local frame2 = script.Parent.Parent.HomeFrame
+	local frame3 = script.Parent.Parent.RageFrame2
 	local open = false
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -427,13 +454,20 @@ local function CMHLQ_fake_script() -- Rage.LocalScript
 			frame2.Visible = false
 		end
 	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame3.Visible == true then
+			frame3.Visible = false
+		end
+	end)
 end
-coroutine.wrap(CMHLQ_fake_script)()
-local function CTPK_fake_script() -- Home.LocalScript 
+coroutine.wrap(TETNE_fake_script)()
+local function DHJNC_fake_script() -- Home.LocalScript 
 	local script = Instance.new('LocalScript', Home)
 
 	local frame = script.Parent.Parent.RageFrame
 	local frame2 = script.Parent.Parent.HomeFrame
+	local frame3 = script.Parent.Parent.RageFrame2
 	local open = false
 	
 	script.Parent.MouseButton1Click:Connect(function()
@@ -447,12 +481,189 @@ local function CTPK_fake_script() -- Home.LocalScript
 			frame2.Visible = true
 		end
 	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame3.Visible == true then
+			frame3.Visible = false
+		end
+	end)
 end
-coroutine.wrap(CTPK_fake_script)()
-local function KMASVNC_fake_script() -- TextLabel_7.LocalScript 
+coroutine.wrap(DHJNC_fake_script)()
+local function VBTWRVD_fake_script() -- TextButton.Script 
+	local script = Instance.new('Script', TextButton)
+
+	local TextButton = script.Parent.Parent.Parent.Parent.RageFrame.Explosive.TextButton
+	
+	TextButton.MouseButton1Click:Connect(function()
+		for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetDescendants()) do
+			if v:IsA("ModuleScript") and v.Name == "Settings" then
+				local a = require(v)
+	
+	
+				a.FireRate = 800
+				a.ExplosiveHit = true
+				a.CanDamageBlizzard = true
+				a.FallOfDamage = -10000
+				a.BWEmitter = 100
+				a.ExPressure = 1000
+				a.LauncherDestroyJointRadiusPercent = 1000
+				a.BlizzardDamage = 100
+				a.RainbowMode = true
+				a.WalkMultiplier = 100
+				a.BulletPenetration = 1000
+				a.GunSize = 10
+	
+	
+				for i,v in pairs(a) do print(i,v) end end end
+	end)
+end
+coroutine.wrap(VBTWRVD_fake_script)()
+local function ZCFNM_fake_script() -- TextButton_2.Script 
+	local script = Instance.new('Script', TextButton_2)
+
+	local TextButton_2 = script.Parent.Parent.Parent.Parent.RageFrame["No Recoil And Spread"].TextButton
+	
+	TextButton_2.MouseButton1Click:Connect(function()
+		for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetDescendants()) do
+			if v:IsA("ModuleScript") and v.Name == "Settings" then
+				local a = require(v)
+	
+				a.SwayBase = 0
+				a.VRecoil = { 0, 0 }
+				a.HRecoil = { 0, 0 }
+				a.AimRecoilReduction = 50
+				a.MinRecoilPower = 0
+				a.MaxRecoilPower = 0
+				a.RecoilPowerStepAmount = 0
+				a.RecoilPunch = 0
+				a.AimInaccuracyStepAmount = 0
+				a.MinSpread = 0
+				a.axSpread = 0
+	
+	
+	
+	
+	
+				for i,v in pairs(a) do print(i,v) end end end
+	end)
+end
+coroutine.wrap(ZCFNM_fake_script)()
+local function YBQCHT_fake_script() -- TextButton_3.Script 
+	local script = Instance.new('Script', TextButton_3)
+
+	local TextButton_3 = script.Parent.Parent.Parent.Parent.RageFrame.NexusHub.TextButton
+	
+	TextButton_3.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/GwnStefano/NexusHub/main/Main", true))()
+	end)
+end
+coroutine.wrap(YBQCHT_fake_script)()
+local function JMHC_fake_script() -- TextButton_4.Script 
+	local script = Instance.new('Script', TextButton_4)
+
+	local TextButton_4 = script.Parent.Parent.Parent.Parent.RageFrame.InfYield.TextButton
+	
+	TextButton_4.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	end)
+end
+coroutine.wrap(JMHC_fake_script)()
+local function KLPVJLS_fake_script() -- TextLabel_7.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_7)
 
 	wait()
 	script.Parent.Text = "You're logged as, ".. game.Players.LocalPlayer.Name
 end
-coroutine.wrap(KMASVNC_fake_script)()
+coroutine.wrap(KLPVJLS_fake_script)()
+local function EEBX_fake_script() -- Rage2.LocalScript 
+	local script = Instance.new('LocalScript', Rage2)
+
+	local frame = script.Parent.Parent.RageFrame
+	local frame2 = script.Parent.Parent.HomeFrame
+	local frame3 = script.Parent.Parent.RageFrame2
+	local open = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame.Visible == true then
+			frame.Visible = false
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame2.Visible == true then
+			frame2.Visible = false
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame3.Visible == false then
+			frame3.Visible = true
+		end
+	end)
+end
+coroutine.wrap(EEBX_fake_script)()
+local function LKMUW_fake_script() -- TextButton_5.Script 
+	local script = Instance.new('Script', TextButton_5)
+
+	local TextButton_5 = script.Parent.Parent.Parent.Parent.RageFrame2["No Recoil and Spread"].TextButton
+	
+	TextButton_5.MouseButton1Click:Connect(function()
+		for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetDescendants()) do
+			if v:IsA("ModuleScript") and v.Name == "ACS_Settings" then
+				local a = require(v)
+				
+				a.gunRecoil = {
+					gunRecoilUp = {0,0}
+					,gunRecoilTilt = {0,0}
+					,gunRecoilLeft = {0,0}
+					,gunRecoilRight = {0,0}
+				}
+	
+				a.camRecoil = {
+					camRecoilUp 	= {0,0}
+					,camRecoilTilt 	= {0,0}
+					,camRecoilLeft 	= {0,0}
+					,camRecoilRight = {0,0}
+				}
+	
+				for i,v in pairs(a) do print(i,v) end end end
+	end)
+end
+coroutine.wrap(LKMUW_fake_script)()
+local function PYXMADH_fake_script() -- Frame.KeyPress 
+	local script = Instance.new('LocalScript', Frame)
+
+	--[[
+		
+		Press Key to Open a GUI Script V2
+		Script By: Theevilem
+		
+		This script works so that when you press a key on your keyboard, it opens a Gui.
+		
+		Put it accordingly into the StarterGui (More info on line 17
+		
+	--]]
+	wait()
+	
+	local Players = game:GetService("Players")
+	local Player = Players.LocalPlayer
+	
+	local Mouse = Player:GetMouse()
+	local Gui = script.Parent -- Set path to whatever Gui you want to open. For Example: script.Parent.Parent.GuiOrFrameName
+	local Open = false
+	
+	function PressL(key) -- Chnage Q to whatever key you desire. Capitals matter. For Example: PressH
+		if (key == "l") then -- Change "q" to whatever letter you use in the line above. Lowercase matters. For Example: "h"
+			if (Open == false) then
+				Gui.Visible = true
+				Open = true
+			elseif (Open == true) then
+				Gui.Visible = false
+				Open = false
+			end
+		end
+	end
+		
+	Mouse.KeyDown:Connect(PressL) -- Make sure (PressQ) matches what you have for line 20. For Example: (PressH)
+end
+coroutine.wrap(PYXMADH_fake_script)()
