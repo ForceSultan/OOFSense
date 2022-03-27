@@ -1,0 +1,186 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local OOFSenseCrosshair = Instance.new("ScreenGui")
+local Blue = Instance.new("Frame")
+local Crosshair = Instance.new("Frame")
+local Crosshair_2 = Instance.new("Frame")
+local Green = Instance.new("Frame")
+local Crosshair_3 = Instance.new("Frame")
+local Crosshair_4 = Instance.new("Frame")
+local Rainbow = Instance.new("Frame")
+local Crosshair_5 = Instance.new("Frame")
+local Crosshair_6 = Instance.new("Frame")
+local Red = Instance.new("Frame")
+local Crosshair_7 = Instance.new("Frame")
+local Crosshair_8 = Instance.new("Frame")
+
+--Properties:
+
+OOFSenseCrosshair.Name = "OOFSenseCrosshair"
+OOFSenseCrosshair.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+OOFSenseCrosshair.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Blue.Name = "Blue"
+Blue.Parent = OOFSenseCrosshair
+Blue.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Blue.BackgroundTransparency = 1.000
+Blue.Position = UDim2.new(0.462852895, 0, 0.444567621, 0)
+Blue.Size = UDim2.new(0, 100, 0, 100)
+
+Crosshair.Name = "Crosshair"
+Crosshair.Parent = Blue
+Crosshair.BackgroundColor3 = Color3.fromRGB(49, 235, 255)
+Crosshair.BorderSizePixel = 0
+Crosshair.Position = UDim2.new(0.5, -1, 0.5, -9)
+Crosshair.Size = UDim2.new(0, 2, 0, 18)
+Crosshair.ZIndex = 2
+
+Crosshair_2.Name = "Crosshair"
+Crosshair_2.Parent = Blue
+Crosshair_2.BackgroundColor3 = Color3.fromRGB(49, 235, 255)
+Crosshair_2.BorderSizePixel = 0
+Crosshair_2.Position = UDim2.new(0.5, -9, 0.5, -1)
+Crosshair_2.Size = UDim2.new(0, 18, 0, 2)
+Crosshair_2.ZIndex = 2
+
+Green.Name = "Green"
+Green.Parent = OOFSenseCrosshair
+Green.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Green.BackgroundTransparency = 1.000
+Green.Position = UDim2.new(0.462852895, 0, 0.444567621, 0)
+Green.Size = UDim2.new(0, 100, 0, 100)
+Green.Visible = false
+
+Crosshair_3.Name = "Crosshair"
+Crosshair_3.Parent = Green
+Crosshair_3.BackgroundColor3 = Color3.fromRGB(14, 255, 54)
+Crosshair_3.BorderSizePixel = 0
+Crosshair_3.Position = UDim2.new(0.5, -1, 0.5, -9)
+Crosshair_3.Size = UDim2.new(0, 2, 0, 18)
+Crosshair_3.ZIndex = 2
+
+Crosshair_4.Name = "Crosshair"
+Crosshair_4.Parent = Green
+Crosshair_4.BackgroundColor3 = Color3.fromRGB(14, 255, 54)
+Crosshair_4.BorderSizePixel = 0
+Crosshair_4.Position = UDim2.new(0.5, -9, 0.5, -1)
+Crosshair_4.Size = UDim2.new(0, 18, 0, 2)
+Crosshair_4.ZIndex = 2
+
+Rainbow.Name = "Rainbow"
+Rainbow.Parent = OOFSenseCrosshair
+Rainbow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Rainbow.BackgroundTransparency = 1.000
+Rainbow.Position = UDim2.new(0.462852895, 0, 0.444567621, 0)
+Rainbow.Size = UDim2.new(0, 100, 0, 100)
+Rainbow.Visible = false
+
+Crosshair_5.Name = "Crosshair"
+Crosshair_5.Parent = Rainbow
+Crosshair_5.BackgroundColor3 = Color3.fromRGB(255, 25, 232)
+Crosshair_5.BorderSizePixel = 0
+Crosshair_5.Position = UDim2.new(0.5, -1, 0.5, -9)
+Crosshair_5.Size = UDim2.new(0, 2, 0, 18)
+Crosshair_5.ZIndex = 2
+
+Crosshair_6.Name = "Crosshair"
+Crosshair_6.Parent = Rainbow
+Crosshair_6.BackgroundColor3 = Color3.fromRGB(255, 25, 232)
+Crosshair_6.BorderSizePixel = 0
+Crosshair_6.Position = UDim2.new(0.5, -9, 0.5, -1)
+Crosshair_6.Size = UDim2.new(0, 18, 0, 2)
+Crosshair_6.ZIndex = 2
+
+Red.Name = "Red"
+Red.Parent = OOFSenseCrosshair
+Red.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Red.BackgroundTransparency = 1.000
+Red.Position = UDim2.new(0.462852895, 0, 0.444567621, 0)
+Red.Size = UDim2.new(0, 100, 0, 100)
+Red.Visible = false
+
+Crosshair_7.Name = "Crosshair"
+Crosshair_7.Parent = Red
+Crosshair_7.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+Crosshair_7.BorderSizePixel = 0
+Crosshair_7.Position = UDim2.new(0.5, -1, 0.5, -9)
+Crosshair_7.Size = UDim2.new(0, 2, 0, 18)
+Crosshair_7.ZIndex = 2
+
+Crosshair_8.Name = "Crosshair"
+Crosshair_8.Parent = Red
+Crosshair_8.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+Crosshair_8.BorderSizePixel = 0
+Crosshair_8.Position = UDim2.new(0.5, -9, 0.5, -1)
+Crosshair_8.Size = UDim2.new(0, 18, 0, 2)
+Crosshair_8.ZIndex = 2
+
+-- Scripts:
+
+local function IHCNDLP_fake_script() -- Crosshair_5.Rainbow Script - Put in any part 
+	local script = Instance.new('Script', Crosshair_5)
+
+	while true do
+		script.Parent.BackgroundColor3 = Color3.new(255/255,0/255,0/255)
+		for i = 0,255,10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(255/255,i/255,0/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(i/255,255/255,0/255)
+		end
+		for i = 0,255,10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(0/255,255/255,i/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(0/255,i/255,255/255)
+		end
+		for i = 0,255,10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(i/255,0/255,255/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(255/255,0/255,i/255)
+		end
+	end
+end
+coroutine.wrap(IHCNDLP_fake_script)()
+local function VYBT_fake_script() -- Crosshair_6.Rainbow Script - Put in any part 
+	local script = Instance.new('Script', Crosshair_6)
+
+	while true do
+		script.Parent.BackgroundColor3 = Color3.new(255/255,0/255,0/255)
+		for i = 0,255,10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(255/255,i/255,0/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(i/255,255/255,0/255)
+		end
+		for i = 0,255,10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(0/255,255/255,i/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(0/255,i/255,255/255)
+		end
+		for i = 0,255,10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(i/255,0/255,255/255)
+		end
+		for i = 255,0,-10 do
+			wait()
+			script.Parent.BackgroundColor3 = Color3.new(255/255,0/255,i/255)
+		end
+	end
+end
+coroutine.wrap(VYBT_fake_script)()
